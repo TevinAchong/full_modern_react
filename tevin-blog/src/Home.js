@@ -11,6 +11,9 @@ const Home = () => {
     return ( 
         <div className="home">
             <BlogList blogs={blogs} homePageTitle="All Blogs!"/>
+            
+            {/* Component being reused */}
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} homePageTitle="Mario's Blogs!"/>
         </div>
      );
 }
