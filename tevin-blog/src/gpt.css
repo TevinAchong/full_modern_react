@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(120deg, #f3f4f6, #e5e7eb);
+    color: #111827;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    width: 100%;
+    background: rgba(17, 24, 39, 0.9);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f3f4f6;
+  }
+  
+  nav a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Content Area */
+  .content {
+    margin-top: 6rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin: 0.5rem 0;
+  }
+  
+  /* Buttons */
+  button {
+    background: #1e40af;
+    color: #f3f4f6;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: #1d4ed8;
+  }
+  
