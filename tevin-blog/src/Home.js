@@ -8,6 +8,8 @@ const Home = () => {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ]);
 
+    const [name, setName] = useState('Killua');
+
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id);
         setBlogs(newBlogs);
@@ -15,14 +17,20 @@ const Home = () => {
 
     // This function runs every time there is a re-render (the data changes)
     useEffect(() => {
-        console.log('useEffect ran');
+        console.log('Name has been changed!!!!');
+        console.log(`It is now ${name}`);
         // We can access the state
-        console.log(blogs);
-    }); 
+    }, [name]);  
+    // passing a dependency array to specify when useEffect should run (not after every render)
+    // an empty array makes sure the function is only run once, on the first render
+    // Since we pass [name] useEffect will only run when there is a change to the state of `name`
 
     return ( 
         <div className="home">
             <BlogList blogs={blogs} homePageTitle="All Blogs!" handleDelete={handleDelete}/>
+
+            <button onClick={() => setName(name === 'Killua' ? 'Gojo' : 'Killua')}>change name</button>
+            <p>{ name }</p>
             
             {/* Component being reused */}
             <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} homePageTitle="Mario's Blogs!"/>
