@@ -28,12 +28,12 @@ const Home = () => {
     return ( 
         <div className="home">
             <BlogList blogs={blogs} homePageTitle="All Blogs!" handleDelete={handleDelete}/>
-
-            <button onClick={() => setName(name === 'Killua' ? 'Gojo' : 'Killua')}>change name</button>
-            <p>{ name }</p>
             
             {/* Component being reused */}
             <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} homePageTitle="Mario's Blogs!"/>
+
+            <button onClick={() => setName(name === 'Killua' ? 'Gojo' : 'Killua')}>change name</button>
+            <p>{ name }</p>
         </div>
      );
 }
